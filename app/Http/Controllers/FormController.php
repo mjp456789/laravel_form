@@ -22,7 +22,7 @@ class FormController extends Controller
    	$formModel = new \App\Form();
    	$formModel->removeNumber($postValues['number']);
    	$missingNumber = $formModel->getSelectedNumber();
-   	echo $missingNumber[0];
+      return view('response',array('number'=>$missingNumber[0]));
    }
  
    public function edit($id){}
